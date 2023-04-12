@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/Shop-context";
 
-const Product = (props) => {
+const Monday = (props) => {
   const { addToCart, cartItems } = useContext(ShopContext);
   const { id, productName, price, productImage } = props.data;
   return (
@@ -24,4 +24,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default Monday;
