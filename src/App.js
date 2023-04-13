@@ -1,9 +1,12 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Shop from "./pages/Shop/Shop";
-import Contact from "./pages/Contact";
-import Cart from "./pages/Cart/Cart";
+import Navpane from "./Components/Navpane";
+import Monday from "./pages/Shop/Monday";
+import Tuesday from "./pages/Shop/Tuesday";
+import Wednesday from "./pages/Shop/Wednesday";
+import Thursday from "./pages/Shop/Thursday";
+import Friday from "./pages/Shop/Friday";
 import { ShopContextProvider } from "./context/Shop-context";
 
 function App() {
@@ -11,11 +14,16 @@ function App() {
     <div className="App">
       <ShopContextProvider>
         <BrowserRouter>
+          <Navpane />
           <Navbar />
           <Routes>
-            <Route path="/" element={<Shop />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path="/contact" element={<Admin />} /> */}
+            <Route path="/monday" element={<Monday />} />
+            <Route path="/tuesday" element={<Tuesday />} />
+            <Route path="/wednesday" element={<Wednesday />} />
+            <Route path="/thursday" element={<Thursday />} />
+            <Route path="/friday" element={<Friday />} />
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>
